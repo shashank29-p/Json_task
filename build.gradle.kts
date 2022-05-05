@@ -34,6 +34,7 @@ dependencies {
   implementation("io.vertx:vertx-web")
   implementation("io.vertx:vertx-mysql-client")
   implementation("io.vertx:vertx-json-schema")
+  implementation("io.vertx:vertx-core")
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
