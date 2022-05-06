@@ -1,7 +1,39 @@
 package com.torryharris.practice;
 
-public class App {
-  public static void main(String[] args) {
+import io.vertx.core.json.JsonObject;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class App {
+  public static void json() {
+    JsonObject jsonObject = new JsonObject();
+    jsonObject.put("fullname", "kathleen brown");
+    Map m1 = new LinkedHashMap(2);
+    m1.put("street", "banglore 5th cross");
+    m1.put("city", "rr nagar");
+    jsonObject.put("address", m1);
+    Map m2 = new LinkedHashMap(4);
+    m2.put("pan", "2Jktps32");
+    m2.put("adhar", "28876354232");
+    m2.put("employee ids", "[121,123,122]");
+    jsonObject.put("ids", m2);
+    for (int i = 0; i < 1; i++) {
+      try (FileWriter file = new FileWriter("employees.json")) {
+        file.write(jsonObject.encodePrettily());
+        file.flush();
+        System.out.println(jsonObject.encodePrettily());
+
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
+  }
+
+  public static void main(String[] args) {
+    json();
   }
 }
