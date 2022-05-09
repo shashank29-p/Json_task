@@ -33,7 +33,6 @@ dependencies {
   implementation("io.vertx:vertx-json-schema")
   implementation("com.googlecode.json-simple:json-simple:1.1.1")
   implementation("io.vertx:vertx-core")
-  implementation("io.vertx:vertx-webclient")
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
