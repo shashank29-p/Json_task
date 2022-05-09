@@ -17,11 +17,11 @@ public class json {
 
   private static void parseEmployeeObject() throws IOException, ParseException {
     Object obj = new JSONParser().parse(new FileReader("employees.json"));
-    System.out.println("------------input-----------------");
+    System.out.println("------------------input-------------------------");
     System.out.println(obj);
-    System.out.println("-------------------------------------");
+    System.out.println("-------------------------------------------");
     JSONObject jsonObject = (JSONObject) obj;
-    System.out.println("------------output-------------------");
+    System.out.println("----------------output------------------------");
     String fullName = (String) jsonObject.get("fullname");
     System.out.println("fullname:" + fullName);
     Map address = ((Map) jsonObject.get("address"));
@@ -38,7 +38,7 @@ public class json {
       Map.Entry pairs = itr2.next();
       System.out.println(pairs.getKey() + " : " + pairs.getValue());
     }
-    System.out.println("---------------------------------------------");
+    System.out.println("---------------------------------------------------");
   }
 }
 
