@@ -29,11 +29,9 @@ application {
 
 dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-  implementation("io.vertx:vertx-web")
   implementation("io.vertx:vertx-json-schema")
   implementation("com.googlecode.json-simple:json-simple:1.1.1")
   implementation("io.vertx:vertx-core")
-  testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
 
